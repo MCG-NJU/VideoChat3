@@ -59,14 +59,12 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .button-arxiv { background: var(--green); border-color: var(--green); color: var(--paper); }
 .button-arxiv:hover { background: var(--accent-dark); border-color: var(--accent-dark); }
 .arxiv-logo { width: 39px; height: 18px; flex: 0 0 39px; max-width: none; object-fit: contain; }
-.button-primary { background: var(--accent); border-color: var(--accent); color: #fff; }
-.button-primary:hover { background: var(--accent-dark); border-color: var(--accent-dark); }
-.button-secondary { background: rgba(255,255,255,.28); border-color: var(--ink); color: var(--ink); }
-.button-secondary:hover { background: var(--paper-deep); }
+.button-primary, .button-secondary { background: rgba(255,255,255,.24); border-color: var(--green); color: var(--ink); }
+.button-primary:hover, .button-secondary:hover { background: var(--green-soft); }
 .button-cream { background: var(--paper); border-color: var(--paper); color: var(--ink); }
 .button-outline { color: var(--paper); border-color: rgba(242,239,231,.6); }
 .brand-icon { width: 16px; height: 16px; flex: 0 0 16px; max-width: none; object-fit: contain; filter: brightness(0); }
-.button-primary .brand-icon, .button-outline .brand-icon { filter: brightness(0) invert(1); }
+.button-outline .brand-icon { filter: brightness(0) invert(1); }
 .brand-icon-huggingface, .button-outline .brand-icon-huggingface { width: 22px; height: 20px; flex-basis: 22px; filter: none; }
 
 .hero {

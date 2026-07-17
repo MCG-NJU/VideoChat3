@@ -9,6 +9,10 @@
 </p>
 
 <p align="center">
+  <a href="https://arxiv.org/abs/2607.14935">
+    <img src="https://img.shields.io/badge/arXiv-2607.14935-b31b1b.svg" align="center" alt="arXiv"> <strong>Paper</strong>
+  </a>
+  &nbsp;&nbsp;&nbsp;
   <a href="https://mcg-nju.github.io/VideoChat3/">
     <img src="docs/public/globe.svg" width="20" align="center" alt="Homepage"> <strong>Homepage</strong>
   </a>
@@ -17,7 +21,6 @@
     <img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg" width="24" align="center" alt="Hugging Face"> <strong>Models &amp; Data</strong>
   </a>
 </p>
-
 ## ✨ Overview
 
 VideoChat3 is an efficient, generalist video-centric multimodal large language model with 4B parameters. It is built for fine-grained motion understanding, long-form video reasoning, temporal grounding, and online streaming perception.
@@ -41,3 +44,19 @@ The project aims to provide a reproducible foundation for efficient, real-world 
 ## 🌐 Project Page
 
 The project homepage is maintained in [`docs/`](./docs) and deployed at <https://mcg-nju.github.io/VideoChat3/>.
+
+## Citation
+
+```
+@misc{videochat3,
+      title={VideoChat3: Fully Open Video MLLM for Efficient and Generalist Video Understanding}, 
+      author={Xinhao Li and Yuhan Zhu and Xiangyu Zeng and Yuhao Dong and Haoning Wu and Zhiqiu Zhang and Yuandong Yang and Changlian Ma and Qingyu Zhang and Yansong Shi and Xinyu Chen and Haoran Chen and Zizheng Huang and Jun Zhang and Kun Ouyang and Lin Sui and Ziang Yan and Yicheng Xu and Chenting Wang and Yinan He and Hongjie Zhang and Yi Wang and Yu Qiao and Yali Wang and Ziwei Liu and Kai Chen and Limin Wang},
+      year={2026},
+      eprint={2607.14935},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2607.14935}, 
+}
+```
+
+

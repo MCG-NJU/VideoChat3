@@ -21,6 +21,7 @@
     <img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg" width="24" align="center" alt="Hugging Face"> <strong>Models &amp; Data</strong>
   </a>
 </p>
+
 ## ✨ Overview
 
 VideoChat3 is an efficient, generalist video-centric multimodal large language model with 4B parameters. It is built for fine-grained motion understanding, long-form video reasoning, temporal grounding, and online streaming perception.

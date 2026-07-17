@@ -230,12 +230,13 @@ export default function Home() {
         <p className="kicker">QUALITATIVE DEMOS</p>
         <div className="section-heading split-heading">
           <h2>See time become evidence.</h2>
-          <p>From retrieving a detail deep inside a long video to waiting for the right moment in a live stream, these examples show the same model working across different temporal scales.</p>
+          <p>Across dense description, long-video retrieval, temporal grounding, and proactive streaming, the same model turns changing visual evidence into grounded language.</p>
         </div>
         <div className="demo-grid">
-          <figure className="demo-wide"><img src={asset("/paper/proactive-demo.png")} alt="Proactive streaming response example" /><figcaption><span>01</span><b>Proactive response</b><p>Observe, wait, then respond.</p></figcaption></figure>
+          <figure className="demo-wide"><img src={asset("/paper/dense-captioning-demo.png")} alt="Dense video captioning example showing a complete pole-vault sequence" /><figcaption><span>01</span><b>Dense video captioning</b><p>Describe a complete action sequence.</p></figcaption></figure>
           <figure><img src={asset("/paper/long-video-demo.png")} alt="Long video question answering example" /><figcaption><span>02</span><b>Long-video QA</b><p>Retrieve details across extended context.</p></figcaption></figure>
           <figure><img src={asset("/paper/temporal-grounding-demo.png")} alt="Temporal video grounding example" /><figcaption><span>03</span><b>Temporal grounding</b><p>Map language to precise boundaries.</p></figcaption></figure>
+          <figure className="demo-wide"><img src={asset("/paper/proactive-demo.png")} alt="Proactive streaming response example" /><figcaption><span>04</span><b>Proactive response</b><p>Observe, wait, then respond.</p></figcaption></figure>
         </div>
       </section>
 

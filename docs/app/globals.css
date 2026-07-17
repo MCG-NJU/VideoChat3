@@ -270,7 +270,6 @@ h1 em, h2 em { font-family: Georgia, "Times New Roman", serif; font-weight: 400;
   .comparison { border-left: 0; border-top: 1px solid var(--ink); padding: 35px 0 0; }
   .demo-grid { grid-template-columns: 1fr; }
   .demo-grid figure, .demo-grid .demo-wide { grid-column: auto; }
-  .demo-grid img, .demo-wide img { height: 250px; object-fit: contain; object-position: center; }
   .footer { grid-template-columns: 1fr; padding-block: 45px; text-align: center; }
   .footer-brand { justify-content: center; }
   .footer-links { justify-content: center; }

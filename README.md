@@ -48,10 +48,6 @@ It combines **I3D-ViT** for 16× spatiotemporal compression with **Adaptive Fram
 - [x] 🤗 Release model weights and data
 - [ ] 🛠️ Release training code
 
-## 🌐 Project Page
-
-The project homepage is maintained in [`docs/`](./docs) and deployed at <https://mcg-nju.github.io/VideoChat3/>.
-
 ## Citation
 
 ```

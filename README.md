@@ -9,11 +9,16 @@
 </p>
 
 <p align="center">
-  <a href="https://mcg-nju.github.io/VideoChat3/">Project Page</a> ·
-  <a href="https://huggingface.co/collections/MCG-NJU/videochat3">Models &amp; Data</a>
+  <a href="https://mcg-nju.github.io/VideoChat3/">
+    <img src="docs/public/globe.svg" width="20" align="center" alt="Homepage"> <strong>Homepage</strong>
+  </a>
+  &nbsp;&nbsp;&nbsp;
+  <a href="https://huggingface.co/collections/MCG-NJU/videochat3">
+    <img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg" width="24" align="center" alt="Hugging Face"> <strong>Models &amp; Data</strong>
+  </a>
 </p>
 
-## Overview
+## ✨ Overview
 
 VideoChat3 is an efficient, generalist video-centric multimodal large language model with 4B parameters. It is built for fine-grained motion understanding, long-form video reasoning, temporal grounding, and online streaming perception.
 
@@ -21,18 +26,18 @@ VideoChat3 combines an **Inflated 3D Vision Transformer (I3D-ViT)** for efficien
 
 The project aims to provide a reproducible foundation for efficient, real-world video understanding.
 
-## Highlights
+## 🚀 Highlights
 
-- **Generalist video understanding:** one model for motion, long video, temporal grounding, and live streaming.
-- **Token-efficient architecture:** I3D-ViT compresses redundant visual tokens while preserving spatiotemporal evidence.
-- **Adaptive streaming perception:** frame resolution is increased only when closer visual inspection is needed.
-- **Open resources:** model weights and the complete training datasets are publicly available.
+- 🎬 **Generalist video understanding:** one model for motion, long video, temporal grounding, and live streaming.
+- ⚡ **Token-efficient architecture:** I3D-ViT compresses redundant visual tokens while preserving spatiotemporal evidence.
+- 🔍 **Adaptive streaming perception:** frame resolution is increased only when closer visual inspection is needed.
+- 🔓 **Open resources:** model weights and the complete training datasets are publicly available.
 
-## TODO
+## 📋 TODO
 
-- [x] Release model weights and data
-- [ ] Release training code
+- [x] 🤗 Release model weights and data
+- [ ] 🛠️ Release training code
 
-## Project Page
+## 🌐 Project Page
 
 The project homepage is maintained in [`docs/`](./docs) and deployed at <https://mcg-nju.github.io/VideoChat3/>.

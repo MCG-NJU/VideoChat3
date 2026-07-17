@@ -60,4 +60,3 @@ The project homepage is maintained in [`docs/`](./docs) and deployed at <https:/
 }
 ```
 
-

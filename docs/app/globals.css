@@ -59,6 +59,9 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .button:hover { transform: translateY(-1px); }
 .button-small { min-height: 36px; padding-inline: 14px; }
 .button-dark { background: var(--ink); color: var(--paper); }
+.button-arxiv { background: rgba(255,255,255,.28); border-color: var(--ink); color: var(--ink); }
+.button-arxiv:hover { background: #fffdf7; }
+.arxiv-mark { color: #a52a2a; font-family: Georgia, "Times New Roman", serif; font-size: 15px; font-weight: 700; letter-spacing: -.045em; line-height: 1; }
 .button-primary { background: var(--accent); border-color: var(--accent); color: #fff; }
 .button-primary:hover { background: var(--accent-dark); border-color: var(--accent-dark); }
 .button-secondary { background: rgba(255,255,255,.28); border-color: var(--ink); color: var(--ink); }
@@ -102,7 +105,8 @@ h1 em, h2 em { font-family: Georgia, "Times New Roman", serif; font-weight: 400;
 .hero-highlights > div + div { padding-left: 18px; border-left: 1px solid var(--line); }
 .hero-highlights strong { font-size: 16px; font-weight: 680; letter-spacing: -.01em; }
 .hero-highlights span { color: var(--muted); font: 11px/1.4 var(--font-geist-mono), monospace; text-transform: uppercase; letter-spacing: .035em; }
-.hero-actions { display: flex; align-items: center; gap: 10px; margin-top: 20px; }
+.hero-actions { display: flex; align-items: center; gap: 8px; margin-top: 20px; }
+.hero-actions .button { padding-inline: 15px; gap: 9px; }
 
 .hero-system { border: 1px solid var(--ink); background: #e8eee4; padding: 14px; box-shadow: 9px 9px 0 var(--ink); }
 .system-topline { display: flex; justify-content: space-between; font: 11px/1 var(--font-geist-mono), monospace; letter-spacing: .07em; margin: 2px 2px 14px; }

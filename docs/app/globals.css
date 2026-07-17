@@ -56,8 +56,8 @@ button, a { -webkit-tap-highlight-color: transparent; }
   transition: transform .2s ease, background .2s ease, color .2s ease;
 }
 .button:hover { transform: translateY(-1px); }
-.button-arxiv { background: var(--green); border-color: var(--green); color: var(--paper); }
-.button-arxiv:hover { background: var(--accent-dark); border-color: var(--accent-dark); }
+.button-arxiv { background: #fff; border-color: var(--green); color: var(--ink); }
+.button-arxiv:hover { background: var(--green-soft); }
 .arxiv-logo { width: 39px; height: 18px; flex: 0 0 39px; max-width: none; object-fit: contain; }
 .button-primary, .button-secondary { background: rgba(255,255,255,.24); border-color: var(--green); color: var(--ink); }
 .button-primary:hover, .button-secondary:hover { background: var(--green-soft); }

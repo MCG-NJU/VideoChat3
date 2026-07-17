@@ -5,7 +5,7 @@
 <h1 align="center">VideoChat3</h1>
 
 <p align="center">
-  <strong>A Fully Open Architecture and Data Recipe for Efficient Video Instruction Training</strong>
+  <strong>A Fully Open Video MLLM for Efficient, Generalist Video Understanding</strong>
 </p>
 
 <p align="center">

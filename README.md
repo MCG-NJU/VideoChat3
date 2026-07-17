@@ -22,13 +22,19 @@
   </a>
 </p>
 
+<p align="center">
+  <img src="docs/public/paper/overview.png" width="100%" alt="VideoChat3 overview across temporal perception, long-video reasoning, temporal grounding, and online proactive response">
+</p>
+
+<p align="center">
+  <em>One model for fine-grained motion, long-video reasoning, temporal grounding, and online proactive response.</em>
+</p>
+
 ## ✨ Overview
 
-VideoChat3 is an efficient, generalist video-centric multimodal large language model with 4B parameters. It is built for fine-grained motion understanding, long-form video reasoning, temporal grounding, and online streaming perception.
+**VideoChat3** is a 4B generalist video MLLM built to understand video across time—from subtle motion and hour-long stories to precise temporal evidence and live streams.
 
-VideoChat3 combines an **Inflated 3D Vision Transformer (I3D-ViT)** for efficient spatiotemporal representation with **Adaptive Frame Resolution** for streaming video perception. Its scalable data pipeline curates three complementary instruction-tuning datasets - **VideoChat3-Academic2M**, **VideoChat3-LV116K**, and **VideoChat3-OL617K** - covering general, long-form, and streaming video scenarios.
-
-The project aims to provide a reproducible foundation for efficient, real-world video understanding.
+It combines **I3D-ViT** for 16× spatiotemporal compression with **Adaptive Frame Resolution** for evidence-aware streaming, trained on **Academic2M**, **LV116K**, and **OL617K**.
 
 ## 🚀 Highlights
 
@@ -59,4 +65,3 @@ The project homepage is maintained in [`docs/`](./docs) and deployed at <https:/
       url={https://arxiv.org/abs/2607.14935}, 
 }
 ```
-

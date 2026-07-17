@@ -1,12 +1,13 @@
 const paperUrl = "https://arxiv.org/abs/2607.14935";
 const codeUrl = "https://github.com/MCG-NJU/VideoChat3";
 const modelUrl = "https://huggingface.co/collections/MCG-NJU/videochat3";
+const arxivLogoUrl = "https://arxiv.org/static/base/1.0.1/images/arxiv-logo-primary-light.svg";
 const huggingFaceLogoUrl = "https://huggingface.co/front/assets/huggingface_logo-noborder.svg";
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 const asset = (path: string) => `${basePath}${path}`;
 
 const Arrow = () => <span aria-hidden="true">↗</span>;
-const ArxivMark = () => <span className="arxiv-mark" aria-hidden="true">arXiv</span>;
+const ArxivLogo = () => <img className="arxiv-logo" src={arxivLogoUrl} alt="" aria-hidden="true" />;
 const GitHubIcon = () => <img className="brand-icon" src={asset("/brands/github.svg")} alt="" aria-hidden="true" />;
 const HuggingFaceIcon = () => <img className="brand-icon brand-icon-huggingface" src={huggingFaceLogoUrl} alt="" aria-hidden="true" />;
 
@@ -24,9 +25,6 @@ export default function Home() {
           <a href="#results">Results</a>
           <a href="#demos">Demos</a>
         </div>
-        <a className="button button-small button-dark" href={codeUrl} target="_blank" rel="noreferrer">
-          <GitHubIcon /><span>View code</span><Arrow />
-        </a>
       </nav>
 
       <section className="hero shell" id="top">
@@ -42,8 +40,8 @@ export default function Home() {
             <div><strong>Fully open</strong><span>Models · code · data · training recipe</span></div>
           </div>
           <div className="hero-actions">
-            <a className="button button-arxiv" href={paperUrl} target="_blank" rel="noreferrer"><ArxivMark /><span>Read the paper</span><Arrow /></a>
-            <a className="button button-primary" href={codeUrl} target="_blank" rel="noreferrer"><GitHubIcon /><span>Explore the code</span><Arrow /></a>
+            <a className="button button-arxiv" href={paperUrl} target="_blank" rel="noreferrer"><ArxivLogo /><span>Paper</span><Arrow /></a>
+            <a className="button button-primary" href={codeUrl} target="_blank" rel="noreferrer"><GitHubIcon /><span>Code</span><Arrow /></a>
             <a className="button button-secondary" href={modelUrl} target="_blank" rel="noreferrer"><HuggingFaceIcon /><span>Models &amp; data</span><Arrow /></a>
           </div>
         </div>

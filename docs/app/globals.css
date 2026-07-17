@@ -42,7 +42,6 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .nav-links a { position: relative; }
 .nav-links a::after { content: ""; position: absolute; height: 1px; left: 0; right: 100%; bottom: -5px; background: var(--ink); transition: right .25s ease; }
 .nav-links a:hover::after { right: 0; }
-.nav > .button { justify-self: end; }
 
 .button {
   min-height: 44px;
@@ -57,11 +56,9 @@ button, a { -webkit-tap-highlight-color: transparent; }
   transition: transform .2s ease, background .2s ease, color .2s ease;
 }
 .button:hover { transform: translateY(-1px); }
-.button-small { min-height: 36px; padding-inline: 14px; }
-.button-dark { background: var(--ink); color: var(--paper); }
-.button-arxiv { background: rgba(255,255,255,.28); border-color: var(--ink); color: var(--ink); }
-.button-arxiv:hover { background: #fffdf7; }
-.arxiv-mark { color: #a52a2a; font-family: Georgia, "Times New Roman", serif; font-size: 15px; font-weight: 700; letter-spacing: -.045em; line-height: 1; }
+.button-arxiv { background: var(--green); border-color: var(--green); color: var(--paper); }
+.button-arxiv:hover { background: var(--accent-dark); border-color: var(--accent-dark); }
+.arxiv-logo { width: 39px; height: 18px; flex: 0 0 39px; max-width: none; object-fit: contain; }
 .button-primary { background: var(--accent); border-color: var(--accent); color: #fff; }
 .button-primary:hover { background: var(--accent-dark); border-color: var(--accent-dark); }
 .button-secondary { background: rgba(255,255,255,.28); border-color: var(--ink); color: var(--ink); }
@@ -69,9 +66,8 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .button-cream { background: var(--paper); border-color: var(--paper); color: var(--ink); }
 .button-outline { color: var(--paper); border-color: rgba(242,239,231,.6); }
 .brand-icon { width: 16px; height: 16px; flex: 0 0 16px; max-width: none; object-fit: contain; filter: brightness(0); }
-.button-primary .brand-icon, .button-dark .brand-icon, .button-outline .brand-icon { filter: brightness(0) invert(1); }
+.button-primary .brand-icon, .button-outline .brand-icon { filter: brightness(0) invert(1); }
 .brand-icon-huggingface, .button-outline .brand-icon-huggingface { width: 22px; height: 20px; flex-basis: 22px; filter: none; }
-.button-small .brand-icon { width: 14px; height: 14px; flex-basis: 14px; }
 
 .hero {
   min-height: 460px;
@@ -289,7 +285,6 @@ h1 em, h2 em { font-family: Georgia, "Times New Roman", serif; font-weight: 400;
   .nav { height: 76px; }
   .brand span { font-size: 18px; }
   .brand img { width: 34px; height: 34px; }
-  .nav .button { min-height: 39px; padding-inline: 12px; font-size: 13px; }
   h1 { font-size: clamp(50px, 15vw, 64px); }
   .hero { padding-top: 30px; }
   .hero-lede { font-size: 18px; line-height: 1.42; }

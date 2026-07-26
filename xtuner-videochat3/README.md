@@ -229,7 +229,6 @@ environments are consistent across nodes.
 | `MASTER_PORT` | `40000` | Rendezvous port |
 | `RDZV_ID` | Slurm job ID or task name | Unique rendezvous ID for the job |
 | `LOG_DIR` | `work_dir/logs/<task-name>` | Per-node log directory |
-| `XTUNER_USE_FA3` | `0` | Enable FlashAttention-3 when set to `1` |
 
 Each node writes a separate log file to prevent multiple `tee` processes from
 overwriting one another on a shared filesystem.

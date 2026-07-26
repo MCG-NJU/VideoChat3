@@ -52,6 +52,7 @@ Recommended environment:
 
 ```bash
 git clone https://github.com/MCG-NJU/VideoChat3.git
+cd VideoChat3
 cd Eval
 
 python -m venv .venv

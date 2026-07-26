@@ -48,10 +48,36 @@ It combines **I3D-ViT** for 16× spatiotemporal compression with **Adaptive Fram
 - 🔍 **Adaptive streaming perception:** frame resolution is increased only when closer visual inspection is needed.
 - 🔓 **Open resources:** model weights and the complete training datasets are publicly available.
 
+## 🛠️ Training
+
+The training implementation is available in
+[`xtuner-videochat3`](xtuner-videochat3). It is built on XTuner V1 and includes
+the VideoChat3 model and data pipeline, staged training configurations, initial
+checkpoint construction, and Slurm/non-Slurm distributed launchers.
+
+Install the training project:
+
+```bash
+cd xtuner-videochat3
+pip install -e ".[video]"
+```
+
+After preparing the model and dataset paths in the selected configuration, start
+a launcher from the same directory. For example, a single-node stage1-1 run is:
+
+```bash
+NNODES=1 NPROC_PER_NODE=8 \
+  bash training_scripts/stage1/VideoChat3_4B_train_stage1-1.sh
+```
+
+See the [complete training guide](xtuner-videochat3/README.md) for initial
+checkpoint construction, all stage configurations, Slurm launch commands, and
+manual multi-node setup.
+
 ## 📋 TODO
 
 - [x] 🤗 Release model weights and data
-- [ ] 🛠️ Release training code
+- [x] 🛠️ Release training code
 
 ## Citation
 

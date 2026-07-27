@@ -86,6 +86,10 @@ paper.
 Please refer to the [evaluation guide](Eval/README.md) for detailed instructions
 on environment setup, model downloading, and evaluation.
 
+## 🌟 Quick Start
+
+Please follow the instructions in [VideoChat3-4B](https://huggingface.co/MCG-NJU/VideoChat3-4B) to set up the environment and download the model weights. We provide two codebases here—one for standard model inference and the other for online proactive-response inference—to help you get started quickly.
+
 ## Citation
 
 ```

@@ -78,17 +78,26 @@ manual multi-node setup.
 
 ## 🏆 Evaluation
 
-The evaluation implementation is available in [`Eval`](Eval). It is built on
+The evaluation implementation is available in [`vlmevalkit-videochat3`](vlmevalkit-videochat3). It is built on
 [VLMEvalKit](https://github.com/open-compass/VLMEvalKit) and supports all
 benchmarks for both offline and online video understanding evaluated in the
 paper.
 
-Please refer to the [evaluation guide](Eval/README.md) for detailed instructions
+Please refer to the [evaluation guide](vlmevalkit-videochat3/Eval/README.md) for detailed instructions
 on environment setup, model downloading, and evaluation.
 
 ## 🌟 Quick Start
 
-Please follow the instructions in [VideoChat3-4B](https://huggingface.co/MCG-NJU/VideoChat3-4B) to set up the environment and download the model weights. We provide two inference implementations here—one for standard model inference and the other for online proactive-response inference—to help you get started quickly.
+Please follow the instructions in [VideoChat3-4B](https://huggingface.co/MCG-NJU/VideoChat3-4B) to set up the environment and download the model weights. 
+
+```
+pip install torch transformers accelerate qwen-vl-utils
+pip install decord opencv-python-headless
+# optional
+pip install flash-attn --no-build-isolation
+```
+
+We provide two inference implementations [here](demo)—one for standard model inference and the other for online proactive-response inference—to help you get started quickly.
 
 ## Citation
 

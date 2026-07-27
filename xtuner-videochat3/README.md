@@ -147,7 +147,7 @@ Before training, prepare the annotation files and multimedia data according to e
 - `anno_path`: Path to the annotation data file.
 
 
-## Prepare Training Configurations
+## Prepare Training Configurations and Launchers
 
 Training recipes are under `training_configs/`. Every recipe has a matching
 launcher:

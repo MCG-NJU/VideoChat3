@@ -126,7 +126,28 @@ the tokenizer and media processor through `tokenizer_path` and
 Because stage0-1 uses MoonViT while stage1-1 uses I3D-ViT, their initialized
 checkpoints should normally be generated and stored separately.
 
-## Prepare Training Configurations and Data
+## Prepare Training Data
+
+We release the training annotations used across all stages at [VideoChat3-Training-Data-Annotations](https://huggingface.co/datasets/MCG-NJU/VideoChat3-Training-Data-Annotations). Please refer to this dataset for the complete annotation files and source-data information required to reproduce the VideoChat3 training pipeline.
+
+For convenient Stage 3 training reproduction, we also provide a standalone lightweight version of the Stage 3 training data at [VideoChat3-Stage3-Training-Data](https://huggingface.co/datasets/lmwang/VideoChat3-Stage3-Training-Data). 
+
+| Stage | Annotation |
+| --- | --- |
+| stage0-1 | `training_data_annotations/stage0/data_stage0-1.json` |
+| stage0-2 | `training_data_annotations/stage0/data_stage0-2.json` |
+| stage1-1 | `training_data_annotations/stage1/data_stage1-1.json` |
+| stage1-2 | `training_data_annotations/stage1/data_stage1-2.json` |
+| stage2 | `training_data_annotations/stage2/data_stage2.json` |
+| stage3 | `training_data_annotations/stage3/data_stage3.json` |
+
+Before training, prepare the annotation files and multimedia data according to each dataset's requirements, and ensure that the following variables are correctly configured:
+
+- `media_root`: Path to multimedia data, such as videos and images.
+- `anno_path`: Path to the annotation data file.
+
+
+## Prepare Training Configurations
 
 Training recipes are under `training_configs/`. Every recipe has a matching
 launcher:

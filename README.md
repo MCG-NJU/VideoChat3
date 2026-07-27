@@ -37,13 +37,15 @@
 It combines **I3D-ViT** for 16× spatiotemporal compression with **Adaptive Frame Resolution** for evidence-aware streaming, trained on **Academic2M**, **LV116K**, and **OL617K**.
 
 ## :fire: Updates
+- [x] **2026/07/27**: 🔥🔥🔥Release the full-stage training data and training checkpoints for each stage of VideoChat3.
+- [x] **2026/07/27**: 🔥🔥🔥Release the training code for VideoChat3.
 - [x] **2026/07/24**: 🔥🔥🔥Release the evaluation code for VideoChat3.
 - [x] **2026/07/17**: 🔥🔥🔥Release the VideoChat3 model weights and training data.
 
 
 ## 🚀 Highlights
 
-- 🎬 **Generalist video understanding:** one model for motion, long video, temporal grounding, and live streaming.
+- 🎬 **Generalist video understanding:** one model for motion, long video, temporal grounding, and online proactive response.
 - ⚡ **Token-efficient architecture:** I3D-ViT compresses redundant visual tokens while preserving spatiotemporal evidence.
 - 🔍 **Adaptive streaming perception:** frame resolution is increased only when closer visual inspection is needed.
 - 🔓 **Open resources:** model weights and the complete training datasets are publicly available.
@@ -51,7 +53,7 @@ It combines **I3D-ViT** for 16× spatiotemporal compression with **Adaptive Fram
 ## 🛠️ Training
 
 The training implementation is available in
-[`xtuner-videochat3`](xtuner-videochat3). It is built on XTuner V1 and includes
+[`xtuner-videochat3`](xtuner-videochat3). It is built on [XTuner V1](https://github.com/internLM/xtuner) and includes
 the VideoChat3 model and data pipeline, staged training configurations, initial
 checkpoint construction, and Slurm/non-Slurm distributed launchers.
 
@@ -74,10 +76,15 @@ See the [complete training guide](xtuner-videochat3/README.md) for initial
 checkpoint construction, all stage configurations, Slurm launch commands, and
 manual multi-node setup.
 
-## 📋 TODO
+## 🏆 Evaluation
 
-- [x] 🤗 Release model weights and data
-- [x] 🛠️ Release training code
+The evaluation implementation is available in [`Eval`](Eval). It is built on
+[VLMEvalKit](https://github.com/open-compass/VLMEvalKit) and supports all
+benchmarks for both offline and online video understanding evaluated in the
+paper.
+
+Please refer to the [evaluation guide](Eval/README.md) for detailed instructions
+on environment setup, model downloading, and evaluation.
 
 ## Citation
 

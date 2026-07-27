@@ -252,6 +252,18 @@ consistent. To inspect all SFT command-line options:
 python xtuner/v1/train/cli/sft.py --help
 ```
 
+## Released Training Checkpoints
+
+We release intermediate training checkpoints for Stage 1, Stage 2, and Stage 3 on Hugging Face:
+
+| Checkpoint | Description | Link |
+| --- | --- | --- |
+| Stage 1 checkpoint | Intermediate checkpoint obtained after Stage 1 training | [Hugging Face](https://huggingface.co/MCG-NJU/VideoChat3-4B-Stage1) |
+| Stage 2 checkpoint | Intermediate checkpoint obtained after Stage 2 training | [Hugging Face](https://huggingface.co/MCG-NJU/VideoChat3-4B-Stage2) |
+| Stage 3 checkpoint (Final checkpoint) | Intermediate checkpoint obtained after Stage 3 training | [Hugging Face](https://huggingface.co/MCG-NJU/VideoChat3-4B) |
+
+To continue staged training, set `model_path` in each training configuration to the checkpoint exported from the preceding stage. 
+
 ## Acknowledgements
 
 This training implementation is built on

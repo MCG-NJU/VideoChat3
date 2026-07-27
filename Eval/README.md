@@ -50,8 +50,9 @@ Recommended environment:
 - FFmpeg/`ffprobe` for video metadata and decoding
 
 ```bash
-git clone https://github.com/zyuhan1999/VLMEvalKit.git
-cd VLMEvalKit
+git clone https://github.com/MCG-NJU/VideoChat3.git
+cd VideoChat3
+cd Eval
 
 python -m venv .venv
 source .venv/bin/activate

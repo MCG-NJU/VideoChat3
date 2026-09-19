@@ -133,6 +133,13 @@ class OVOBench(VideoBaseDataset):
         'real_time_visual_perception': 'real_time_visual_perception.json',
         'forward_active_responding': 'forward_active_responding.json',
     }
+    # Official OVO-Bench averaging: unweighted mean of subtasks within each group,
+    # then unweighted mean of the three group scores.
+    TASK_SUBTASKS = {
+        'backward_tracking': ('EPM', 'ASI', 'HLD'),
+        'real_time_visual_perception': ('OCR', 'ACR', 'ATR', 'STU', 'FPD', 'OJR'),
+        'forward_active_responding': ('REC', 'SSR', 'CRR'),
+    }
 
     def __init__(
         self,
@@ -592,6 +599,15 @@ class OVOBench(VideoBaseDataset):
             groups[value] = float(np.mean(subset['hit'])) if len(subset) else 0.0
         return groups
 
+    @classmethod
+    def _task_acc_from_subtasks(cls, subtask_acc):
+        task_acc = {}
+        for task, subtasks in cls.TASK_SUBTASKS.items():
+            scores = [subtask_acc[name] for name in subtasks if name in subtask_acc]
+            if scores:
+                task_acc[task] = float(np.mean(scores))
+        return task_acc
+
     def evaluate(self, eval_file, **judge_kwargs):
         assert get_file_extension(eval_file) in ['xlsx', 'json', 'tsv'], (
             'Evaluation file should be in xlsx/json/tsv format'
@@ -643,8 +659,8 @@ class OVOBench(VideoBaseDataset):
         scored['hit'] = hits
         dump(scored, score_file)
 
-        task_acc = self._group_acc(scored, 'task')
         subtask_acc = self._group_acc(scored, 'subtask')
+        task_acc = self._task_acc_from_subtasks(subtask_acc)
         result = {
             'overall': float(np.mean(list(task_acc.values()))) if task_acc else 0.0,
             'task_accuracy': task_acc,

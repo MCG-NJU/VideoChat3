@@ -1070,6 +1070,26 @@ class OVBench(VideoBaseDataset):
             message.append(dict(type='text', value='Best option:(', role='assistant'))
         return message
 
+    # Official OVBench AVG is the unweighted mean of these 16 subset accuracies.
+    OVBENCH_SUB_ANSWER_TYPES = (
+        'Action Anticipation',
+        'Goal/Step Prediction',
+        'Movement Prediction',
+        'Action Persistence',
+        'Step Verification',
+        'Object Presence',
+        'Action Retrieval',
+        'Procedure Recall',
+        'Trajectory Retrieval',
+        'Action Location',
+        'Object Position',
+        'Action Trajectory',
+        'Object Trajectory',
+        'Action Sequence',
+        'Step Localization',
+        'Object Existence State',
+    )
+
     @staticmethod
     def _group_acc(data, column):
         if column not in data.columns:
@@ -1080,6 +1100,27 @@ class OVBench(VideoBaseDataset):
             subset = data[data[column].astype(str) == value]
             groups[value] = float(np.mean(subset['hit'])) if len(subset) else 0.0
         return groups
+
+    @classmethod
+    def _official_avg(cls, sub_answer_type_accuracy):
+        missing = [name for name in cls.OVBENCH_SUB_ANSWER_TYPES if name not in sub_answer_type_accuracy]
+        extra = sorted(set(sub_answer_type_accuracy) - set(cls.OVBENCH_SUB_ANSWER_TYPES))
+        if missing:
+            warnings.warn(
+                'OVBench official AVG expects 16 sub_answer_type scores; missing: '
+                + ', '.join(missing)
+            )
+        if extra:
+            warnings.warn(
+                'OVBench official AVG ignores unexpected sub_answer_type keys: '
+                + ', '.join(extra)
+            )
+        scores = [
+            sub_answer_type_accuracy[name]
+            for name in cls.OVBENCH_SUB_ANSWER_TYPES
+            if name in sub_answer_type_accuracy
+        ]
+        return float(np.mean(scores)) if scores else 0.0
 
     def evaluate(self, eval_file, **judge_kwargs):
         assert get_file_extension(eval_file) in ['xlsx', 'json', 'tsv'], (
@@ -1116,10 +1157,11 @@ class OVBench(VideoBaseDataset):
         scored['hit'] = hits
         dump(scored, score_file)
 
+        sub_answer_type_accuracy = self._group_acc(scored, 'sub_answer_type')
         result = {
-            'overall_accuracy': float(np.mean(scored['hit'])) if len(scored) else 0.0,
+            'overall_accuracy': self._official_avg(sub_answer_type_accuracy),
             'answer_type_accuracy': self._group_acc(scored, 'answer_type'),
-            'sub_answer_type_accuracy': self._group_acc(scored, 'sub_answer_type'),
+            'sub_answer_type_accuracy': sub_answer_type_accuracy,
         }
         dump(result, acc_file)
         return result

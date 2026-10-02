@@ -103,13 +103,10 @@ We provide two inference implementations [here](demo)—one for standard model i
 ## Citation
 
 ```
-@misc{videochat3,
-      title={VideoChat3: Fully Open Video MLLM for Efficient and Generalist Video Understanding}, 
-      author={Xinhao Li and Yuhan Zhu and Xiangyu Zeng and Yuhao Dong and Haoning Wu and Zhiqiu Zhang and Yuandong Yang and Changlian Ma and Qingyu Zhang and Yansong Shi and Xinyu Chen and Haoran Chen and Zizheng Huang and Jun Zhang and Kun Ouyang and Lin Sui and Ziang Yan and Yicheng Xu and Chenting Wang and Yinan He and Hongjie Zhang and Yi Wang and Yu Qiao and Yali Wang and Ziwei Liu and Kai Chen and Limin Wang},
-      year={2026},
-      eprint={2607.14935},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV},
-      url={https://arxiv.org/abs/2607.14935}, 
+@article{li2026videochat3,
+  title={VideoChat3: Fully Open Video MLLM for Efficient and Generalist Video Understanding},
+  author={Li, Xinhao and Zhu, Yuhan and Zeng, Xiangyu and Dong, Yuhao and Wu, Haoning and Zhang, Zhiqiu and Yang, Yuandong and Ma, Changlian and Zhang, Qingyu and Shi, Yansong and others},
+  journal={arXiv preprint arXiv:2607.14935},
+  year={2026}
 }
 ```

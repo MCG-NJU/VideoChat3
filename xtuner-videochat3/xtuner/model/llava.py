@@ -266,9 +266,9 @@ class LLaVAModel(BaseModel):
             # Flash Attention 2.0 only supports torch.float16 and
             # torch.bfloat16 dtypes
             if cfg.attn_implementation == "flash_attention_2":
-                cfg.torch_dtype = torch_dtype
+                cfg.dtype = torch_dtype
         elif SUPPORT_FLASH2 and cls_name in SUPPORT_FLASH_ATTN2:
-            cfg.torch_dtype = torch_dtype
+            cfg.dtype = torch_dtype
             cfg.attn_implementation = "flash_attention_2"
         elif SUPPORT_FLASH1 and cls_name in SUPPORT_SDPA_ATTN:
             cfg.attn_implementation = "sdpa"
@@ -291,7 +291,7 @@ class LLaVAModel(BaseModel):
             else torch.float16
         )
 
-        cfg.torch_dtype = torch_dtype
+        cfg.dtype = torch_dtype
         quantization_config = cfg.quantization_config
         quantization_config.bnb_4bit_compute_dtype = torch_dtype
         quantization_config.bnb_4bit_quant_storage = torch_dtype

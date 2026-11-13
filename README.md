@@ -84,7 +84,7 @@ The evaluation implementation is available in [`vlmevalkit-videochat3`](vlmevalk
 benchmarks for both offline and online video understanding evaluated in the
 paper.
 
-Please refer to the [evaluation guide](vlmevalkit-videochat3/Eval/README.md) for detailed instructions
+Please refer to the [evaluation guide](https://github.com/MCG-NJU/VideoChat3/blob/main/vlmevalkit-videochat3/README.md) for detailed instructions
 on environment setup, model downloading, and evaluation.
 
 ## 🌟 Quick Start
